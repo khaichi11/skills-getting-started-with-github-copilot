@@ -77,7 +77,7 @@ activities = {
         "participants": []
     }
 }
-// ...existing code...
+# // ...existing code...
 
 @app.get("/")
 def root():
