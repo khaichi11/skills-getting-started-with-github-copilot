@@ -20,6 +20,7 @@ app.mount("/static", StaticFiles(directory=os.path.join(Path(__file__).parent,
           "static")), name="static")
 
 # In-memory activity database
+// ...existing code...
 activities = {
     "Chess Club": {
         "description": "Learn strategies and compete in chess tournaments",
@@ -38,9 +39,45 @@ activities = {
         "schedule": "Mondays, Wednesdays, Fridays, 2:00 PM - 3:00 PM",
         "max_participants": 30,
         "participants": ["john@mergington.edu", "olivia@mergington.edu"]
+    },
+    "Basketball": {
+        "description": "Team sport focusing on shooting, passing and teamwork.",
+        "schedule": "Mondays and Thursdays, 4:00 PM - 5:30 PM",
+        "max_participants": 20,
+        "participants": []
+    },
+    "Swimming": {
+        "description": "Lap swimming, technique practice and water safety for all levels.",
+        "schedule": "Wednesdays, 4:00 PM - 5:00 PM",
+        "max_participants": 25,
+        "participants": []
+    },
+    "Photography": {
+        "description": "Artistic photography fundamentals and portfolio development.",
+        "schedule": "Tuesdays, 4:00 PM - 5:30 PM",
+        "max_participants": 15,
+        "participants": []
+    },
+    "Sculpture": {
+        "description": "Hands-on sculpting with clay and mixed media.",
+        "schedule": "Fridays, 4:00 PM - 6:00 PM",
+        "max_participants": 12,
+        "participants": []
+    },
+    "Debate Club": {
+        "description": "Practice debates, argumentation techniques and public speaking.",
+        "schedule": "Wednesdays, 3:30 PM - 5:00 PM",
+        "max_participants": 20,
+        "participants": []
+    },
+    "Math Club": {
+        "description": "Problem solving, competitions and math enrichment activities.",
+        "schedule": "Thursdays, 3:30 PM - 5:00 PM",
+        "max_participants": 18,
+        "participants": []
     }
 }
-
+// ...existing code...
 
 @app.get("/")
 def root():
